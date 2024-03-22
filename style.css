@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(images/Poppins-Regular.ttf) format("truetype");
+}
+:root {
+    /* ### Primary */
+    --Red: hsl(0, 100%, 74%); 
+    --Green: hsl(154, 59%, 51%);
+
+    /* ### Accent */
+
+    --Blue: hsl(248, 32%, 49%);
+
+    /* ### Neutral */
+
+    --Dark-Blue: hsl(249, 10%, 26%); 
+    --Grayish-Blue: hsl(246, 25%, 77%);
+
+    /* font size */
+    --fs-160: 16px;
+    
+    /* font weight */
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+    /* font family */
+    --ff-poppins: 'Poppins';
+}
+.ff-poppins {
+    font-family: var(--ff-poppins);
+}
+.fs-160 {
+    font-size: var(--fs-160);
+}
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+.fw-500 {
+    font-weight: var(--fw-500);
+}
+.fw-600 {
+    font-weight: var(--fw-600);
+}
+.fw-700 {
+    font-weight: var(--fw-700);
+}
+.text-white {
+    color: #fff;
+}
+.text-dark {
+    color: var(--Dark-Blue);
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.text-red {
+    color: var(--Red);
+}
+.bg-green {
+    background: var(--Green);
+}
+.bg-blue {
+    background: var(--Blue);
+}
+.bg-white {
+    background: #fff;
+}
+.flex {
+    display: flex;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+h1, h2, h3, h4, h5, p {
+    font-weight: var(--fw-400);
+}
+input,
+textarea,
+button, 
+select {
+    font: inherit;
+}
+body {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Red);
+    background-image: url("images/bg-intro-mobile.png");
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+.container {
+    flex-direction: column;
+    gap: 1rem;
+    width: 65%;
+    max-width: 310px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.preview > h2,
+.wrapper > .aside {
+    margin: 0 0 1rem 0;
+}
+.aside {
+    padding: 1rem 3rem;
+    border-radius: 10px;
+}
+.main {
+    padding: 1rem;
+    border-radius: 10px;
+}
+form * {
+    margin: 0 0 .7rem 0;
+}
+form > footer > p {
+    color: var(--Grayish-Blue);
+    font-size: 13px;
+}
+.form-control {
+    position: relative;
+}
+.form-control > img {
+    display: inline-block;
+    position: absolute;
+    right: 3%;
+    top: 15%;
+    visibility: hidden;
+}
+.form-control > input {
+    width: 100%;
+    padding: .5rem 1rem;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 5px;
+    outline: none;
+}
+.form-control > input:active {
+    border: 1px solid var(--Blue);
+}
+.form-control > input::placeholder {
+    color: var(--Dark-Blue);
+}
+button {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    padding: .7rem 1rem;
+    border-radius: 5px;
+    width: 100%;
+}
+button:active,
+button:hover {
+    opacity: .8;
+}
+.form-control.success input {
+    border: 1px solid #2ecc71;
+}
+.form-control.error input {
+    border: 1px solid #e74e3c;
+}
+.form-control.error span {
+    visibility: visible;
+    color: #e74e3c;
+    display: block;
+    font-size: 13px;
+    text-align: left;
+}
+.form-control.error img {
+    visibility: visible;
+}
+@media (min-width: 40rem) {
+    body {
+        background-image: url("images/bg-intro-desktop.png");
+        background-size: cover;
+        background-position: center;
+    }
+    .container {
+        flex-direction: row;
+        width: 95%;
+        max-width: 800px;
+        gap: 4rem;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .preview {
+        width: 50%;
+    }
+    .preview > h2 {
+        font-size: 2rem;
+    }
+    .preview > p {
+        font-size: 12px;
+    }
+    .wrapper {
+        width: 50%;
+    }
+    .form-control.error span {
+        text-align: right;
+    }
+    form > footer > p {
+        font-size: 9px;
+        text-align: center;
+    }
+    .aside {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+}

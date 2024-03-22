@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  </style>
+</head>
+<body class="flex">
+  <div class="container flex ff-poppins fw-400 text-white">
+    <div class="preview">
+      <h2 class="fw-700">Learn to code by watching others</h2>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+        but understanding how developers think is invaluable. 
+      </p>
+    </div>
+    <div class="wrapper">
+      <div class="aside bg-blue">
+        <p><small class="fw-700">Try it free 7 days</small> then $20/mo. thereafter</p>
+      </div>
+      <form id="form" class="main bg-white text-dark fw-500">
+        <div class="form-control capitalize">
+          <label for="first name"></label>
+          <input type="text" placeholder="first name" class="capitalize" id="first-name">
+          <img src="images/icon-error.svg" alt="">
+          <span></span>
+        </div>
+        <div class="form-control capitalize">
+          <label for="last name"></label>
+          <input type="text" placeholder="last name" class="capitalize" id="last-name">
+          <img src="images/icon-error.svg" alt="">
+          <span></span>
+        </div>
+        <div class="form-control capitalize">
+          <label for="email address"></label>
+          <input type="email" placeholder="email address" class="capitalize" id="email">
+          <img src="images/icon-error.svg" alt="">
+          <span></span>
+        </div>
+        <div class="form-control capitalize">
+          <label for="password"></label>
+          <input type="password" placeholder="password" class="capitalize" id="password">
+          <img src="images/icon-error.svg" alt="">
+          <span></span>
+        </div>
+        <button class="bg-green text-white uppercase">claim your free trial</button>
+        <footer>
+          <p>By clicking the button you are agreeing to our <small class="text-red">Terms and Services</small></p>
+        </footer>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
